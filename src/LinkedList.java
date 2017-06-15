@@ -21,6 +21,7 @@ public class LinkedList {
         return start == null;
     }
 
+    // This function will insert a new node at start
     public void insertAtStart(int val){
         Node n = new Node(null, val);
         size++;
@@ -34,6 +35,8 @@ public class LinkedList {
         }
         display(start);
     }
+
+    // This function will insert a new node at end
 
     public void insertAtEnd(int val){
         Node n = new Node(null, val);
@@ -50,6 +53,8 @@ public class LinkedList {
         display(start);
 
     }
+
+        // This function will insert a new node at specified position
 
     public void insertAtPosition(int index, int val){
         if(index>size){
@@ -78,6 +83,8 @@ public class LinkedList {
 
 
     }
+
+        // This function will delete a node from specified position
 
     public void deleteAtPosition(int index){
         if(index>size){
@@ -115,6 +122,7 @@ public class LinkedList {
         display(start);
     }
 
+         // This function will delete a node from end   
     public void deleteFromEnd(int index){
         if(index >= size){
             System.out.println("Out of Index");
@@ -155,6 +163,7 @@ public class LinkedList {
         System.out.println("Size "+size);
     }
 
+            // This function will rotate a linked list by given number of index value
     public void rotate(int index){
         if(index > size) {
             System.out.println("Out of index");
@@ -194,6 +203,7 @@ public class LinkedList {
         }
     }
 
+            // This function will swap the nodes in pairs
     public void swapInPairs(){
         Node s= start;
         Node s1 = start.getLink();
@@ -215,6 +225,7 @@ public class LinkedList {
         display(start);
     }
 
+            // This function will reorder the linked list
     public void reorder(){
         Node s = start;
         Node e;
@@ -237,6 +248,7 @@ public class LinkedList {
 
     }
 
+            // This function will remove duplicate nodes from sorted list
     public void removeDulicateFromSorted(){
         Node s = start;
         Node temp;
@@ -258,6 +270,7 @@ public class LinkedList {
         display(start);
     }
 
+            // This function will display the nodes in linked list
     public void display(Node node){
         if(size == 0){
             System.out.println("Empty list");
@@ -275,6 +288,7 @@ public class LinkedList {
         System.out.println();
     }
 
+            // This function will reverse the linked list
     public void reverseLinkedList(){
         if(size == 0){
             System.out.println("NULL");
@@ -294,6 +308,7 @@ public class LinkedList {
 
     }
 
+            // This function will check whether the linked list nodes are palindrome or not using extra space.
     public boolean isPalindrome1(){
         LinkedList l = new LinkedList();
         Node start1 = null;
@@ -325,6 +340,8 @@ public class LinkedList {
         return p;
 
     }
+
+                // This function will check whether the linked list nodes are palindrome or not without using extra space(inplace).
 
     public boolean isPalindrome2(){
         Node n1;
